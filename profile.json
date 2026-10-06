@@ -1,0 +1,43 @@
+{
+  "_说明": "修改本文件保存你的长期偏好。Agent 每天会读取它来生成计划。所有字段都可以按实际情况修改。",
+  "name": "我",
+  "location": "苏州",
+  "diet": {
+    "goal": "低脂高蛋白减脂",
+    "daily_calories": 1800,
+    "daily_protein_g": 120,
+    "preferences": ["低脂", "高蛋白", "少油少盐", "食材多样化"],
+    "allergies": [],
+    "dislikes": [],
+    "meals_per_day": 3,
+    "snack": true
+  },
+  "study": {
+    "goal": "英语提升 + 科研能力",
+    "vocab_per_day": 40,
+    "papers_per_week": 3,
+    "current_courses": ["机器学习", "论文写作"],
+    "weekly_themes": {
+      "周一": "新论文精读",
+      "周二": "词汇强化 + 论文总结",
+      "周三": "课程学习与练习",
+      "周四": "文献泛读",
+      "周五": "错题复习 + 输出",
+      "周六": "长周期项目",
+      "周日": "复盘与下周计划"
+    }
+  },
+  "fitness": {
+    "goal": "力量训练 + 适度有氧",
+    "workout_days": ["周一", "周三", "周五", "周日"],
+    "duration_minutes": 45,
+    "available_equipment": ["哑铃", "弹力带", "跑步机"],
+    "injuries": [],
+    "intensity": "中等"
+  },
+  "lifestyle": {
+    "water_liters": 2.0,
+    "sleep_target": "23:30",
+    "wake_target": "07:00"
+  }
+}

@@ -1,0 +1,12 @@
+请先注册 GitHub 账号，然后把下面的占位符替换成你自己的信息：
+
+  GITHUB_USERNAME   你的 GitHub 用户名（小写英文）
+  REPO_NAME         仓库名（例如 lifehub）
+
+需要修改的文件：
+  1. .github/workflows/deploy.yml     把 GITHUB_USERNAME / REPO_NAME 两处占位符替换
+  2. templates/head.html              把 /static/... 改为 /REPO_NAME/static/... （两处）
+  3. templates/foot.html              同上，如有引用
+  4. agent/server.py                  上线后无需修改，本机仍可用
+
+修改完成后，即可按「部署步骤」上传到 GitHub，并开启 Pages。

@@ -1,0 +1,75 @@
+:root{
+  --green:#2e9e6b; --green-d:#1f7a50; --bg:#f4f7f5; --card:#fff;
+  --text:#22302a; --muted:#6b7c74; --line:#e2ebe6;
+  --orange:#e8893a; --blue:#3a7bd5; --red:#d9534f;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;}
+a{color:var(--green-d);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* 导航 */
+.topnav{display:flex;align-items:center;justify-content:space-between;
+  background:#fff;padding:0 24px;height:60px;box-shadow:0 2px 8px rgba(0,0,0,.05);position:sticky;top:0;z-index:10;}
+.brand{font-size:18px;font-weight:700;color:var(--green-d);}
+.topnav ul{display:flex;gap:4px;list-style:none;}
+.topnav a{display:block;padding:8px 14px;border-radius:8px;color:var(--muted);font-weight:500;transition:.15s;}
+.topnav a:hover{background:#eef6f1;text-decoration:none;color:var(--green-d);}
+.topnav li.active a{background:var(--green);color:#fff;}
+
+/* 布局 */
+.container{max-width:1080px;margin:24px auto;padding:0 20px;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr;}}
+
+/* 头部 */
+.today-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;}
+.today-head h1{font-size:26px;}
+.weekday{color:var(--green);font-size:18px;}
+.sub{color:var(--muted);margin-top:4px;}
+
+/* 卡片 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.03);}
+.card h2{font-size:18px;margin-bottom:12px;color:var(--green-d);}
+.card h3{font-size:16px;margin-bottom:10px;color:var(--green-d);}
+.target{color:var(--muted);font-size:13px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px dashed var(--line);}
+
+.meal,.task{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-bottom:1px solid #f0f5f2;}
+.meal:last-child,.task:last-child{border-bottom:none;}
+.meal label,.task label{display:flex;align-items:flex-start;gap:8px;cursor:pointer;}
+.meal input,.task input{margin-top:4px;}
+.meal .meta,.task .tip{color:var(--muted);font-size:13px;margin-left:24px;}
+.task .tip{margin:0 0 0 24px;}
+.remind{list-style:none;}
+.remind li{padding:6px 0;border-bottom:1px dashed var(--line);}
+.remind li:last-child{border-bottom:none;}
+
+.warn{background:#fff8ec;border-color:#f3d9b0;}
+.warn button,.today-head button,button{cursor:pointer;background:var(--green);color:#fff;border:none;
+  padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;transition:.15s;}
+.warn button:hover,.today-head button:hover,button:hover{background:var(--green-d);}
+
+/* 表单 */
+label{display:block;font-size:14px;color:var(--muted);margin:12px 0 4px;}
+input[type=text],textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit;}
+#saveTip{margin-left:12px;color:var(--green);font-weight:600;}
+
+/* 表格 */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.03);}
+.tbl th{background:#eef6f1;text-align:left;padding:12px;color:var(--green-d);font-size:14px;}
+.tbl td{padding:12px;border-top:1px solid var(--line);font-size:14px;}
+.rate{display:inline-block;padding:2px 10px;border-radius:12px;color:#fff;font-size:13px;}
+.rate-0{background:#d9534f;}.rate-10{background:#f0ad4e;}.rate-20{background:#f0ad4e;}
+.rate-30{background:#eea236;}.rate-40{background:#eea236;}.rate-50{background:#eea236;}
+.rate-60{background:#5bc0de;}.rate-70{background:#5bc0de;}.rate-80{background:#5cb85c;}
+.rate-90{background:#2e9e6b;}.rate-100{background:#1f7a50;}
+.meals{list-style:none;font-size:14px;}
+.meals li{padding:4px 0;}
+.meals .meta{color:var(--muted);font-size:12px;}
+.tip{background:#eef6f1;color:var(--green-d);}
+
+h1{font-size:24px;margin-bottom:16px;color:var(--green-d);}
+.warmup{color:var(--muted);font-size:13px;margin-bottom:8px;}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:24px;}
